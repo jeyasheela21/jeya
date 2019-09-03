@@ -1,0 +1,6 @@
+n=int(input())
+num=input()
+num=num.split()
+t=[int(x) for x in num]
+tuple1=tuple(t)
+print(hash(tuple1))
