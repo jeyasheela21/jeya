@@ -1,0 +1,16 @@
+import re
+f=open("test.txt","w+")
+f.write("Learn and study Ayurveda Learn online!Online Certificate Course In Ayurvedic Dietetics.Uvas Ayurveda Offers Dietetics Course")
+f.close()
+words=[]
+res=""
+file=open("test.txt","r")
+pat=r'\w\wu'
+for line in file:
+    word=line.lower().replace('.',' ').replace('','').split(" ")
+    for s in word:
+        res=re.match(pat,s)
+        if(res != None):
+            res.group(0)
+            words.append(s)
+print(words)
