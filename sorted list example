@@ -1,0 +1,15 @@
+l= [[input(), float(input())] for _ in range(int(input()))] 
+sh = sorted(list(set([m for name, m in l])))[1]
+print('\n'.join([a for a,b in sorted(l) if b == sh]))
+#==============Explanation=================
+#1  getting input as given range
+#2  [m for name, m in l]===> getting all values from list l
+#2  set[m for name, m in l]===> get unique value from the list its converted in set
+#2  list(set([m for name, m in l])))==> its reconverted at list
+#2  sorted(list(set([m for name, m in l])))==>sort the list
+#2 sorted(list(set([m for name, m in l])))[1]==>take 2nd lowest value
+#3 printing the name and mark of student that has the second lowest mark by iterating through the sorted list.
+#If the condition matches, the result list is appended to tuple  -`[a for a,b in sorted(l) if b == sh])` 
+#now join the list with \n - newline to print name and mark of student with second largest mark
+#print('\n'.join([a for a,b in sorted(l) if b ==sh))
+
